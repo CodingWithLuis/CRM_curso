@@ -19,4 +19,14 @@ class Client extends Model
         'company_address',
         'company_phone_number',
     ];
+
+    public function projects()
+    {
+        return $this->hasMany(Project::class);
+    }
+
+    public function tasks()
+    {
+        return $this->hasMany(Task::class);
+    }
 }

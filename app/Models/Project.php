@@ -20,6 +20,8 @@ class Project extends Model
         'client_id'
     ];
 
+    public const STATUS = ['Abierto', 'En Progreso', 'Cancelado', 'Completado'];
+
     public function user()
     {
         return $this->belongsTo(User::class)->withDefault();

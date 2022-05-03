@@ -16,11 +16,13 @@ class Task extends Model
         'name',
         'description',
         'deadline',
-        'taks_status',
+        'task_status',
         'user_id',
         'client_id',
         'project_id'
     ];
+
+    public const STATUS = ['Abierto', 'En Progreso', 'Cancelado', 'Completado'];
 
     public function user()
     {

@@ -30,6 +30,8 @@
         @include('layouts.partials.footer')
     </div>
 
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{ asset('js/plugins/bootstrap.bundle.js') }}"></script>
     <script src="{{ asset('js/adminlte.min.js') }}"></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" />
@@ -47,7 +49,20 @@
     <script>
         $(document).ready(function() {
             flatpickr(".date", {
-                "locale": "es"
+                "locale": "es",
+                dateFormat: "d/m/Y",
+            });
+
+            $.extend(true, $.fn.dataTable.defaults, {
+                "language": {
+                    "url": "http://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json"
+                },
+
+                columnDefs: [{
+                    targets: -1,
+                    "searching": false,
+                    "orderable": false
+                }, ]
             });
 
             $('.select2').select2();

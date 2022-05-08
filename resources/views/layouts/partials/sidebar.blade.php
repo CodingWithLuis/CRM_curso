@@ -40,8 +40,9 @@
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('admin.tasks.index') }}" class="nav-link">
-                        <i class="nav-icon fas fa-clipboard-list"></i <p>
-                        Tareas
+                        <i class="nav-icon fas fa-clipboard-list"></i>
+                        <p>
+                            Tareas
                         </p>
                     </a>
                 </li>
